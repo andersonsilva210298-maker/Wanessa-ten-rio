@@ -8,6 +8,8 @@
         --accent: #c8956d;
         --card: #ffffff;
         --line: #e3d8ca;
+        /* AJUSTE FÁCIL: aumente este percentual para ampliar a foto no celular. */
+        --hero-image-size-mobile: 72%;
         box-sizing: border-box;
         padding-top: env(safe-area-inset-top, 0px);
         padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -72,11 +74,11 @@
       /* Imagem principal: troque assets/Wanessa.png para alterar a foto de fundo. */
       .hero {
         background-image:
-          linear-gradient(90deg, rgba(250, 246, 241, .97) 0%, rgba(250, 246, 241, .88) 42%, rgba(252, 252, 252, 0.12) 100%),
+          linear-gradient(90deg, rgba(250, 246, 241, .97) 0%, rgba(250, 246, 241, .88) 42%, rgba(250, 246, 241, .12) 100%),
           url("assets/Wanessa.png");
         background-repeat: no-repeat;
-        background-position: right 100px center;
-        background-size: auto, 50%;
+        background-position: right 80px center;
+        background-size: auto, 45%;
       }
       .wrap {
         max-width: 560px;
@@ -336,21 +338,22 @@
           min-height: 100svh;
           align-items: flex-end;
           padding-top: 300px;
+          background-color: #faf6f1;
           background-image:
-            linear-gradient(180deg, rgba(250, 246, 241, .02) 0%, rgba(250, 246, 241, .18) 35%, rgba(250, 246, 241, .88) 68%, rgba(250, 246, 241, .96) 100%),
+            linear-gradient(180deg, rgba(250, 246, 241, .02) 0%, rgba(250, 246, 241, .18) 35%, rgba(250, 246, 241, .88) 68%, #faf6f1 100%),
             url("assets/Wanessa.png");
           background-position: center top;
-          background-size: 100% 100%, auto 72%;
+          background-size: 100% 100%, auto var(--hero-image-size-mobile);
         }
 
         /* Título branco na versão mobile */
         .hero h1 {
-          color: #555454;;
+          color: #fff;
           text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
         }
 
         .hero h1 em {
-          color: #0f6b6b;;
+          color: #fff;
         }
         .wrap {
           padding-right: 0;
@@ -381,7 +384,6 @@
       @media (max-width: 380px) {
         .hero {
           padding-top: 250px;
-          background-size: 100% 100%, auto 66%;
         }
         h1 {
           font-size: clamp(2rem, 10vw, 2.5rem);
