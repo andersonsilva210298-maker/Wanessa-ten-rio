@@ -27,8 +27,10 @@
             h = size * 2.45;
           var w = ss(0.78, 0.99, p);
           var amp = mob ? 0 : Math.min(W * 0.3, 380);
+          // No celular, o implante começa à direita e se desloca
+          // suavemente para o centro conforme a página é rolada.
           var cx = mob
-            ? W / 2
+            ? W * 0.82
             : W / 2 + Math.cos(p * Math.PI * 3) * amp;
           cx = cx + (W / 2 - cx) * w;
           var ty = Math.min(H * 0.22, 150);
