@@ -348,12 +348,12 @@
 
         /* Título branco na versão mobile */
         .hero h1 {
-          color: #fff;
+          color: #2c2b2b;
           text-shadow: 0 2px 12px rgba(0, 0, 0, .55);
         }
 
         .hero h1 em {
-          color: #fff;
+          color: #0bd4d4;
         }
         .wrap {
           padding-right: 0;
